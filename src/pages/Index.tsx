@@ -31,14 +31,6 @@ const Index = () => {
     },
     {
       id: 3,
-      name: "Рыжики донские солёные",
-      weight: "3 литра",
-      price: "от 900₽",
-      description: "Ароматные рыжики с насыщенным вкусом",
-      emoji: "🧡"
-    },
-    {
-      id: 4,
       name: "Грузди холодной засолки",
       weight: "1.5 литра",
       price: "от 450₽",
@@ -105,7 +97,7 @@ const Index = () => {
             <p className="text-xl text-muted-foreground">Только натуральные ингредиенты и проверенные рецепты</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {products.map((product, index) => (
               <Card 
                 key={product.id} 
