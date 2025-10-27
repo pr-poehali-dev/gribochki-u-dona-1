@@ -18,21 +18,32 @@ const Index = () => {
       name: "Грузди солёные классические",
       weight: "3 литра",
       price: "от 800₽",
-      description: "Традиционный рецепт засолки донских груздей"
+      description: "Традиционный рецепт засолки донских груздей",
+      emoji: "🍄"
     },
     {
       id: 2,
       name: "Грузди с пряностями",
       weight: "3 литра", 
       price: "от 850₽",
-      description: "С добавлением чеснока и ароматных специй"
+      description: "С добавлением чеснока и ароматных специй",
+      emoji: "🍄"
     },
     {
       id: 3,
+      name: "Рыжики донские солёные",
+      weight: "3 литра",
+      price: "от 900₽",
+      description: "Ароматные рыжики с насыщенным вкусом",
+      emoji: "🧡"
+    },
+    {
+      id: 4,
       name: "Грузди холодной засолки",
       weight: "1.5 литра",
       price: "от 450₽",
-      description: "Хрустящие грузди по бабушкиному рецепту"
+      description: "Хрустящие грузди по бабушкиному рецепту",
+      emoji: "🍄"
     }
   ];
 
@@ -94,14 +105,14 @@ const Index = () => {
             <p className="text-xl text-muted-foreground">Только натуральные ингредиенты и проверенные рецепты</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {products.map((product, index) => (
               <Card 
                 key={product.id} 
                 className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-card animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="text-5xl mb-4">🍄</div>
+                <div className="text-5xl mb-4">{product.emoji}</div>
                 <h3 className="text-2xl font-bold mb-2">{product.name}</h3>
                 <div className="flex items-center gap-2 text-muted-foreground mb-3">
                   <Icon name="Package" size={18} />
