@@ -66,6 +66,16 @@ const Index = () => {
     window.open('https://wa.me/79996253450?text=Здравствуйте! Интересуют ваши грузди', '_blank');
   };
 
+  const handleProductOrder = (productName: string, productPrice: string, productWeight: string) => {
+    const message = `🍄 Хочу заказать:
+
+${productName}
+${productWeight} — ${productPrice}`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/79996253450?text=${encodedMessage}`, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-50 bg-primary/95 backdrop-blur text-primary-foreground shadow-md">
@@ -133,10 +143,16 @@ const Index = () => {
                   <span>{product.weight}</span>
                 </div>
                 <p className="text-muted-foreground mb-4">{product.description}</p>
-                <div className="flex items-center justify-between mt-6">
-                  <span className="text-2xl font-bold text-primary">{product.price}</span>
-                  <Button variant="outline" onClick={() => document.getElementById('contacts')?.scrollIntoView({ behavior: 'smooth' })}>
-                    Заказать
+                <div className="flex flex-col gap-3 mt-6">
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xl font-bold text-primary">{product.price}</span>
+                  </div>
+                  <Button 
+                    className="w-full" 
+                    onClick={() => handleProductOrder(product.name, product.price, product.weight)}
+                  >
+                    Заказать в WhatsApp
+                    <Icon name="MessageCircle" className="ml-2" size={18} />
                   </Button>
                 </div>
               </Card>
