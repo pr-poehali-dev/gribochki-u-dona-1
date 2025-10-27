@@ -135,6 +135,49 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-secondary/20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Наши грибочки</h2>
+            <p className="text-xl text-muted-foreground">Смотрите, как выглядит наша продукция</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-fade-in aspect-square">
+              <img 
+                src="https://cdn.poehali.dev/files/4f0af787-3ad8-4afd-8c7f-6b6682663ce3.jpg"
+                alt="Грузди солёные в банках"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-fade-in aspect-square" style={{ animationDelay: '100ms' }}>
+              <img 
+                src="https://cdn.poehali.dev/files/227899af-011a-4d70-adb9-3a3fa35d9a4b.jpg"
+                alt="Грузди крупным планом"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-fade-in aspect-square" style={{ animationDelay: '200ms' }}>
+              <img 
+                src="https://cdn.poehali.dev/files/177e6b9e-43b1-47d1-92d8-9e25d70e44b4.jpg"
+                alt="Грузди с пряностями"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-fade-in aspect-square" style={{ animationDelay: '300ms' }}>
+              <img 
+                src="https://cdn.poehali.dev/files/84c840d3-25bb-4066-b381-69a74162e768.jpg"
+                alt="Грузди в контейнере"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
