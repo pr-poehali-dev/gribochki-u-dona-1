@@ -49,7 +49,17 @@ const Index = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Заявка отправлена:", formData);
+    
+    const message = `🍄 Новая заявка с сайта!
+    
+Имя: ${formData.name}
+Телефон: ${formData.phone}
+Сообщение: ${formData.message || 'Не указано'}`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/79996253450?text=${encodedMessage}`, '_blank');
+    
+    setFormData({ name: '', phone: '', message: '' });
   };
 
   const handleWhatsAppClick = () => {
