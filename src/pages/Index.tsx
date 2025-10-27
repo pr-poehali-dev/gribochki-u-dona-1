@@ -131,6 +131,68 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Отзывы наших покупателей</h2>
+            <p className="text-xl text-muted-foreground">Что говорят о нас те, кто попробовал наши грузди</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="p-6 animate-fade-in hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-2xl">
+                  👩
+                </div>
+                <div>
+                  <h4 className="font-bold">Елена</h4>
+                  <div className="flex gap-1 text-yellow-500">
+                    {"★".repeat(5)}
+                  </div>
+                </div>
+              </div>
+              <p className="text-muted-foreground">
+                "Заказывала грузди классические — просто восторг! Как у бабушки в деревне. Хрустящие, ароматные. Всей семье понравились!"
+              </p>
+            </Card>
+
+            <Card className="p-6 animate-fade-in hover:shadow-xl transition-all duration-300" style={{ animationDelay: '100ms' }}>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-2xl">
+                  👨
+                </div>
+                <div>
+                  <h4 className="font-bold">Дмитрий</h4>
+                  <div className="flex gap-1 text-yellow-500">
+                    {"★".repeat(5)}
+                  </div>
+                </div>
+              </div>
+              <p className="text-muted-foreground">
+                "Рядовки — это что-то! Никогда раньше не пробовал, а теперь заказываю постоянно. Очень вкусные и нежные."
+              </p>
+            </Card>
+
+            <Card className="p-6 animate-fade-in hover:shadow-xl transition-all duration-300" style={{ animationDelay: '200ms' }}>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-2xl">
+                  👵
+                </div>
+                <div>
+                  <h4 className="font-bold">Анна Петровна</h4>
+                  <div className="flex gap-1 text-yellow-500">
+                    {"★".repeat(5)}
+                  </div>
+                </div>
+              </div>
+              <p className="text-muted-foreground">
+                "Грузди с пряностями — моя любимая закуска! Чеснок и специи в самый раз, не пересолены. Беру уже третий раз!"
+              </p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section id="contacts" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
